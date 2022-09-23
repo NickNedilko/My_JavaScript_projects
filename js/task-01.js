@@ -1,29 +1,21 @@
-// const categoriesListEl = document.querySelector('#categories');
-// const quantityСategories = categoriesListEl.children;
+setInterval(setClock, 1000);
 
-// console.log(`Number of categories: ${quantityСategories.length}`);
+const hourHand = document.querySelector("[data-hour-hand]");
+const minuteHand = document.querySelector("[data-minute-hand]");
+const secondHand = document.querySelector("[data-second-hand]");
 
-// [...quantityСategories].forEach(item => {
-//   console.log('');
-//   console.log(`Category: ${item.querySelector('h2').textContent}`);
-//   console.log(`Elements: ${item.querySelectorAll('li').length}`);
-// });
+function setClock() {
+  const currentDate = new Date();
+  const secondsRatio = currentDate.getSeconds() / 60;
+  const minutesRatio = (seconds + currentDate.getMinutes()) / 60;
+  const hoursRatio = (minutes + currentDate.getHours()) / 12;
+}
+setRotation(secondHand, secondsRatio);
+setRotation(minuteHand, minutesRatio);
+setRotation(hourHand, hoursRatio);
 
-// ===========================2=======================================
-const listEl = document.querySelector('#categories');
-const quantityСategories = listEl.children.length;
-console.log(`Number of category:`, quantityСategories);
+function setRotation(element, rotationRatio) {
+  element.style.setProperty("--rotation", rotationRatio * 360);
+}
 
-const allLiEl = document.querySelectorAll('li.item')
-allLiEl.forEach(element => {
-  const category = element.querySelector('h2').textContent;
-  const quatity = element.querySelectorAll('li').length;
-  console.log('')
-  console.log( `Category:`, category);
-  console.log( `Elements:`, quatity);
-});
-
-
-
-
-
+setClock();
