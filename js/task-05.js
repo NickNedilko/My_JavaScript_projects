@@ -17,9 +17,6 @@ copyIconEl.addEventListener("click", () => {
   }
 });
 
-
-function makeSrting(){}
-
 const alfSmallArray = [];
  for (let i = 'a'.charCodeAt(0); i <= 'z'.charCodeAt(0); i++){
     let ad = String.fromCharCode(i);
@@ -37,8 +34,6 @@ for (let i = '!'.charCodeAt(0); i <= '@'.charCodeAt(0); i++){
  
 } 
 
-console.log(symbolArray)
-
 const charArray = [...alfBigArray, ...alfSmallArray,...symbolArray]
 const chars = charArray.join('');
 console.log(chars);
@@ -49,8 +44,7 @@ function createPassword() {
   for (let index = 0; index < passwordLength; index++) {
     const randomNum = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNum, randomNum + 1);
-    console.log(randomNum);
-    console.log(password)
+
   }
   inputEl.value = password;
   alertContainerEl.innerText = password + " copied!";
@@ -61,3 +55,4 @@ function copyPassword() {
   inputEl.setSelectionRange(0, 9999);
   navigator.clipboard.writeText(inputEl.value);
 }
+
