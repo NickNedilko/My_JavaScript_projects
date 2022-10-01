@@ -13,3 +13,4 @@ bodyEl.style.backgroundColor = getRandomHexColor();
 spanEl.textContent = bodyEl.style.backgroundColor;
 }
 
+console.log('hi world')

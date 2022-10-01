@@ -4,16 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 7</title>
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/progress_bar.css">
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <input id="font-size-control" type="range" min="16" max=" 96" />
-    <br />
-    <span id="text">Abracadabra!</span>
+    <div class="container">
+      <div class="progress-container">
+        <hr class="progress-bar-back">
+        <hr class="progress-bar-front">
+<div class="step checked">
+  <i class="fa-solid fa-check"></i>
+  <small>Start</small>
+</div>
+<div class="step">
+  <i class="fa-solid fa-business-time"></i>
+</div>
+<div class="step">
+  <i class="fa-solid fa-business-time"></i>
+</div>
+<div class="step">
+  <i class="fa-solid fa-business-time"></i>
+</div>
+<div class="step">
+  <i class="fa-solid fa-business-time"></i>
+</div>
+      </div>
+      <button class="btn" id="prev" >
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <button class="btn" id="next">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </button>
+    </div>
 
-    <script src="js/task-07.js" type="module"></script>
+    <script src="js/progress_bar.js" type="module"></script>
   </body>
 </html>
